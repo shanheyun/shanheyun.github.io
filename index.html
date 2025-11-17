@@ -1,17 +1,214 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>我的网页 - HTMLPAGE</title><meta name="description" content="在线可视化网页构建器，HTMLPAGE"><meta name="keywords" content="HTMLPAGE"></head><body><body id="i4ls"><div><!-- Styles --><link href="https://raw.githubusercontent.com/shanheyun/shanheyun.github.io/refs/heads/main/css/page.min.css" rel="stylesheet"/><link href="https://raw.githubusercontent.com/shanheyun/shanheyun.github.io/refs/heads/main/css/style.css" rel="stylesheet"/><!-- Favicons --><link rel="apple-touch-icon" href="img/apple-touch-icon.png"/><link rel="icon" href="img/favicon.png"/><!-- Navbar --><!-- /.navbar --><!-- Header --><!-- /.header --><!-- Main Content --><main class="main-content"><!--
-    |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
-    | Shots
-    |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
-    !--><!--
-    |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
-    | CTA
-    |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
-    !--><section class="section"><div class="container"><div class="row gap-y align-items-center"><div class="col-md-6 text-center"><img src="https://raw.githubusercontent.com/shanheyun/shanheyun.github.io/refs/heads/main/img/yys_20251107001030.jpg" alt="..."/></div><div class="col-md-6 text-center text-md-left"><h2>遥远之忆—雲山河<br/></h2><p class="lead mb-6">超鬼王＋好友</p></div></div></div></section><!--
-    |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
-    | Pricing
-    |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
-    !--><!--
-    |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
-    | Partners
-    |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
-    !--></main><!-- Footer --><!-- /.footer --><!-- Scripts --><script src="https://raw.githubusercontent.com/shanheyun/shanheyun.github.io/refs/heads/main/js/page.min.js"></script><script src="https://raw.githubusercontent.com/shanheyun/shanheyun.github.io/refs/heads/main/js/script.js"></script></div></div></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人展示 | 我的作品集</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        /* 导航栏 */
+        nav {
+            background: #333;
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        /* 首页Hero区 */
+        .hero {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        /* 关于我 */
+        .about {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 0.5rem;
+        }
+        .about-content {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+        }
+        .about img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        /* 技能 */
+        .skills {
+            padding: 5rem 5%;
+            background: #f0f0f0;
+        }
+        .skills h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .skill-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .skill-card i {
+            font-size: 3rem;
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+        /* 页脚 */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <!-- 引入图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <ul>
+            <li><a href="#home">首页</a></li>
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#skills">技能</a></li>
+            <li><a href="#contact">联系</a></li>
+        </ul>
+    </nav>
+
+    <!-- 首页Hero区 -->
+    <section class="hero" id="home">
+        <div>
+            <h1>你好，我是[你的名字]</h1>
+            <p>一名[你的身份，如：前端开发工程师/UI设计师/产品经理]，热爱[你的兴趣，如：技术探索/创意设计/用户体验]。</p>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section class="about" id="about">
+        <h2>关于我</h2>
+        <div class="about-content">
+            <img src="https://via.placeholder.com/300" alt="个人头像">
+            <div>
+                <h3>个人简介</h3>
+                <p>我拥有[X年]相关领域经验，曾在[公司名称]负责[项目/工作内容]。擅长[核心技能1]、[核心技能2]，注重[你的工作理念，如：细节打磨/用户需求/高效协作]。</p>
+                <h3>教育背景</h3>
+                <p>[学校名称] | [专业] | [学历] | [毕业时间]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能 -->
+    <section class="skills" id="skills">
+        <h2>我的技能</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fab fa-html5"></i>
+                <h3>HTML5</h3>
+                <p>熟练构建语义化网页结构</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS3</h3>
+                <p>掌握Flex/Grid布局与响应式设计</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+                <p>实现交互逻辑与数据处理</p>
+            </div>
+            <!-- 可添加更多技能卡片 -->
+        </div>
+    </section>
+
+    <!-- 页脚（联系信息） -->
+    <footer id="contact">
+        <p>联系方式：<a href="mailto:your@email.com" style="color: #4CAF50;">your@email.com</a></p>
+        <p>微信：[你的微信号] | GitHub：<a href="https://github.com/yourname" style="color: #4CAF50;">github.com/yourname</a></p>
+        <p>&copy; 2025 个人展示网站 | 版权所有</p>
+    </footer>
+</body>
+</html>
+ 
+
+使用说明
+
+1. 替换占位内容：
+- 将  [你的名字]   [你的身份]   [你的兴趣]  等括号内文字替换为个人信息。
+- 替换图片链接：
+- Hero区背景图：替换  url('...')  中的链接（推荐使用Unsplash等免费图库）。
+- 个人头像：替换  <img src="https://via.placeholder.com/300">  为你的头像图片链接。
+2. 修改技能模块：
+- 技能卡片中的图标可通过 Font Awesome(https://fontawesome.com/) 更换（搜索图标名称，替换  class="fab fa-html5"  中的  fa-html5 ）。
+3. 本地运行：
+- 将代码复制到文本编辑器（如VS Code），保存为  .html  文件，直接用浏览器打开即可预览。
+
+进阶优化建议
+
+- 添加作品集：在“技能”下方新增一个“作品集”区块，用图片网格展示项目案例（可参考代码中“技能卡片”的布局）。
+- 美化样式：调整颜色方案（修改  #4CAF50  为个人喜欢的主色调）、字体大小或动画效果（如导航栏滚动变化）。
+- 部署上线：免费托管平台推荐 GitHub Pages、Netlify 或 Vercel，上传代码即可生成公开网址。
+
+如果需要添加“作品集”“博客”等模块，或调整设计风格，可以告诉我，我会帮你补充细节！
