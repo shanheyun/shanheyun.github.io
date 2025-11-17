@@ -3,191 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人展示 | 我的作品集</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-        body {
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        /* 导航栏 */
-        nav {
-            background: #333;
-            padding: 1rem 5%;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        /* 首页Hero区 */
-        .hero {
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            color: white;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        /* 关于我 */
-        .about {
-            padding: 5rem 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .about h2 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: #333;
-            border-bottom: 2px solid #4CAF50;
-            padding-bottom: 0.5rem;
-        }
-        .about-content {
-            display: flex;
-            gap: 3rem;
-            align-items: center;
-        }
-        .about img {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        /* 技能 */
-        .skills {
-            padding: 5rem 5%;
-            background: #f0f0f0;
-        }
-        .skills h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 3rem;
-        }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .skill-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .skill-card i {
-            font-size: 3rem;
-            color: #4CAF50;
-            margin-bottom: 1rem;
-        }
-        /* 页脚 */
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .about-content {
-                flex-direction: column;
+    <title>雲山河的个人网站</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF', // 主蓝色
+                    },
+                }
             }
-            .hero h1 {
-                font-size: 2rem;
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
             }
         }
     </style>
-    <!-- 引入图标库 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <!-- 导航栏 -->
-    <nav>
-        <ul>
-            <li><a href="#home">首页</a></li>
-            <li><a href="#about">关于我</a></li>
-            <li><a href="#skills">技能</a></li>
-            <li><a href="#contact">联系</a></li>
-        </ul>
-    </nav>
-
-    <!-- 首页Hero区 -->
-    <section class="hero" id="home">
-        <div>
-            <h1>你好，我是雲山河</h1>
-            <p>爱你不是我的错，是你最美惹的祸。</p>
+<body class="bg-gray-50 font-sans">
+    <!-- 页眉 -->
+    <header class="bg-primary text-white py-6 px-4 shadow-md">
+        <div class="container mx-auto text-center">
+            <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-shadow">雲山河</h1>
+            <p class="text-[clamp(1rem,2vw,1.2rem)] mt-2 opacity-90">探索生活的无限可能</p>
         </div>
-    </section>
+    </header>
 
-    <!-- 关于我 -->
-    <section class="about" id="about">
-        <h2>关于我</h2>
-        <div class="about-content">
-            <img src="https://via.placeholder.com/300" alt="个人头像">
-            <div>
-                <h3>个人简介</h3>
-                <p>一代目零零后，懒惰的二次元在肥宅路上越走越远。除了上班就是打游戏，社恐，一个人哪里都不想去。老阴阳师玩家，不会画符念咒。每年打死的八岐大蛇可绕平安京两圈。（平安京大环境不好，出号走藏宝阁）</p>
-                <h3>教育背景</h3>
-                <p>[郑州大学] | [自动化] | [本科] | [2022]</p>
+    <main class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- 打招呼区域 -->
+        <section class="mb-12 text-center">
+            <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-semibold text-gray-800 mb-4">你好，很高兴认识你！</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto text-lg">欢迎来到我的个人主页，这里记录了我的生活点滴与创作分享，希望能与你一同成长。</p>
+        </section>
+
+        <!-- 个人简介区域 -->
+        <section class="mb-16 bg-white rounded-xl shadow-sm p-6 md:p-8">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary/20">
+                    <!-- 头像占位图（实际使用时替换src） -->
+                    <img src="https://picsum.photos/200/200" alt="雲山河的头像" class="w-full h-full object-cover">
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">关于我</h3>
+                    <p class="text-gray-600 mb-2">热爱生活，喜欢用镜头和文字记录美好瞬间。</p>
+                    <p class="text-gray-600 mb-2">热衷于分享旅行见闻、创意灵感与日常思考。</p>
+                    <p class="text-gray-600">期待与志同道合的朋友相遇！</p>
+                </div>
             </div>
+        </section>
+
+        <!-- 图片展示区域 -->
+        <section class="mb-16">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">我的作品分享</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 图片1 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <img src="https://picsum.photos/600/400?random=1" alt="作品展示1" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h4 class="font-semibold text-gray-800">山间日出</h4>
+                        <p class="text-gray-600 text-sm mt-1">在海拔2000米的山顶等待第一缕阳光</p>
+                    </div>
+                </div>
+                <!-- 图片2 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <img src="https://picsum.photos/600/400?random=2" alt="作品展示2" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h4 class="font-semibold text-gray-800">城市夜景</h4>
+                        <p class="text-gray-600 text-sm mt-1">霓虹灯下的都市剪影</p>
+                    </div>
+                </div>
+                <!-- 图片3 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <img src="https://picsum.photos/600/400?random=3" alt="作品展示3" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h4 class="font-semibold text-gray-800">海边日落</h4>
+                        <p class="text-gray-600 text-sm mt-1">海平面与天空的温柔邂逅</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系方式区域 -->
+        <section class="mb-16 bg-white rounded-xl shadow-sm p-6 md:p-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">联系我</h3>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                <!-- 社交媒体 -->
+                <div class="flex gap-6">
+                    <!-- 抖音 -->
+                    <a href="https://www.douyin.com" target="_blank" class="flex flex-col items-center group">
+                        <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary text-2xl mb-2 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                            <i class="fa fa-music"></i>
+                        </div>
+                        <span class="text-gray-600">抖音</span>
+                    </a>
+                    <!-- Bilibili -->
+                    <a href="https://www.bilibili.com" target="_blank" class="flex flex-col items-center group">
+                        <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary text-2xl mb-2 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                            <i class="fa fa-play-circle"></i>
+                        </div>
+                        <span class="text-gray-600">Bilibili</span>
+                    </a>
+                </div>
+                <!-- 邮箱 -->
+                <div class="flex items-center gap-3 text-gray-600">
+                    <i class="fa fa-envelope text-primary text-xl"></i>
+                    <span>yunshanhe@outlook.com</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-primary text-white py-6 px-4 text-center">
+        <div class="container mx-auto">
+            <p class="mb-2">&copy; 2025 雲山河. All rights reserved.</p>
+            <p class="text-sm opacity-80">powered by 小布</p>
         </div>
-    </section>
-
-    <!-- 技能 -->
-    <section class="skills" id="skills">
-        <h2>我的技能</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <i class="fab fa-html5"></i>
-                <h3>HTML5</h3>
-                <p>熟练构建语义化网页结构</p>
-            </div>
-            <div class="skill-card">
-                <i class="fab fa-css3-alt"></i>
-                <h3>CSS3</h3>
-                <p>掌握Flex/Grid布局与响应式设计</p>
-            </div>
-            <div class="skill-card">
-                <i class="fab fa-js"></i>
-                <h3>JavaScript</h3>
-                <p>实现交互逻辑与数据处理</p>
-            </div>
-            <!-- 可添加更多技能卡片 -->
-        </div>
-    </section>
-
-    <!-- 页脚（联系信息） -->
-    <footer id="contact">
-        <p>联系方式：<a href="mailto:your@email.com" style="color: #4CAF50;">yunshanhe@outlook.com</a></p>
-        <p>bilibil：[雲山河] </a></p>
-        <p>&copy; 2025 雲山河的网站 | 版权所有</p>
     </footer>
+
+    <script>
+        // 平滑滚动效果
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
