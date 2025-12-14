@@ -59,37 +59,24 @@
             </div>
         </section>
 
-        <!-- 图片展示区域 -->
-        <section class="mb-16">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">我的作品分享</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="aspect-square"> <!-- 16:9比例容器 -->
-                <!-- 图片1 -->
-                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
-                    <img src="https://sway.cloud.microsoft/s/c1GQ5ebYLRbUBVFZ/images/6X9qkZb70DKfcb?quality=320&allowAnimation=false" alt="异瞳" class="w-full h-full object-cover">
-                    <div class="p-4">
-                        <h4 class="font-semibold text-gray-800">异瞳</h4>
-                        <p class="text-gray-600 text-sm mt-1">漂亮的流浪猫</p>
-                    </div>
-                </div>
-                <!-- 图片2 -->
-                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
-                    <img src="https://sway.cloud.microsoft/s/c1GQ5ebYLRbUBVFZ/images/IO8X6wUpF102W1?quality=320&allowAnimation=false" alt="凉" class="w-full h-full object-cover">
-                    <div class="p-4">
-                        <h4 class="font-semibold text-gray-800">凉</h4>
-                        <p class="text-gray-600 text-sm mt-1">霓虹灯外的剪影</p>
-                    </div>
-                </div>
-                <!-- 图片3 -->
-                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
-                    <img src="https://picsum.photos/600/400?random=3" alt="作品展示3" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h4 class="font-semibold text-gray-800">海边日落</h4>
-                        <p class="text-gray-600 text-sm mt-1">海平面与天空的温柔邂逅</p>
-                    </div>
-                </div>
+       <section class="mb-16">
+    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">我的作品分享</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- 图片1 -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+            <!-- 固定高度的 4:3 容器 -->
+            <div class="relative pt-[75%]"> <!-- 4:3 = 3/4 = 75% -->
+                <img src="https://sway.cloud.microsoft.com/s/c1GQ5ebYLRbUBVFZ/images/6X9qkZb70DKfcb?quality=320&allowAnimation=false" 
+                     alt="异瞳" 
+                     class="absolute top-0 left-0 w-full h-full object-cover">
             </div>
-        </section>
+            <div class="p-4">
+                <h4 class="font-semibold text-gray-800 mb-2">异瞳</h4>
+                <p class="text-gray-600 text-sm">漂亮的流浪猫，拥有独特的双眼颜色</p>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- 联系方式区域 -->
         <section class="mb-16 bg-white rounded-xl shadow-sm p-6 md:p-8">
