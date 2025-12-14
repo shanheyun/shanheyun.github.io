@@ -25,12 +25,12 @@
                             dark: '#1f2937',    // 深色模式卡片背景
                         },
                         header: {
-                            DEFAULT: '#1e40af', // 浅色模式页眉颜色 - 深蓝色
-                            dark: '#1e3a8a',    // 深色模式页眉颜色 - 更深的蓝色
+                            DEFAULT: '#2d3748', // 浅色模式页眉颜色 - 深灰色
+                            dark: '#374151',    // 深色模式页眉颜色 - 灰黑色
                         },
                         footer: {
-                            DEFAULT: '#1e40af', // 浅色模式页脚颜色 - 深蓝色
-                            dark: '#1e3a8a',    // 深色模式页脚颜色 - 更深的蓝色
+                            DEFAULT: '#2d3748', // 浅色模式页脚颜色 - 深灰色
+                            dark: '#374151',    // 深色模式页脚颜色 - 灰黑色
                         },
                         text: {
                             primary: {
@@ -41,7 +41,10 @@
                                 DEFAULT: '#6b7280', // 浅色模式次要文字
                                 dark: '#d1d5db',    // 深色模式次要文字
                             }
-                        }
+                        },
+                        // 社交媒体品牌颜色
+                        douyin: '#010101', // 抖音黑色
+                        bilibili: '#FB7299', // B站粉色
                     }
                 }
             }
@@ -57,6 +60,13 @@
             }
             .text-shadow-dark {
                 text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            }
+            /* 抖音图标的颜色微调 */
+            .douyin-icon-light {
+                background: linear-gradient(135deg, #69C9D0 0%, #EE1D52 100%);
+            }
+            .douyin-icon-dark {
+                background: linear-gradient(135deg, #5AB4C4 0%, #D91A49 100%);
             }
         }
     </style>
@@ -108,7 +118,7 @@
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 dark:group-hover:bg-black/20 transition-colors duration-300"></div>
                     </div>
                     <div class="p-4">
-                        <h4 class="font-semibold text-text-primary dark:text-text-primary-dark mb-2 group-hover:text-header dark:group-hover:text-header-dark transition-colors duration-300">异瞳</h4>
+                        <h4 class="font-semibold text-text-primary dark:text-text-primary-dark mb-2 group-hover:text-header dark:group-hover:text-gray-400 transition-colors duration-300">异瞳</h4>
                         <p class="text-text-secondary dark:text-text-secondary-dark text-sm">漂亮的流浪猫，拥有独特的双眼颜色</p>
                     </div>
                 </div>
@@ -123,7 +133,7 @@
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 dark:group-hover:bg-black/20 transition-colors duration-300"></div>
                     </div>
                     <div class="p-4">
-                        <h4 class="font-semibold text-text-primary dark:text-text-primary-dark mb-2 group-hover:text-header dark:group-hover:text-header-dark transition-colors duration-300">异瞳</h4>
+                        <h4 class="font-semibold text-text-primary dark:text-text-primary-dark mb-2 group-hover:text-header dark:group-hover:text-gray-400 transition-colors duration-300">异瞳</h4>
                         <p class="text-text-secondary dark:text-text-secondary-dark text-sm">漂亮的流浪猫，拥有独特的双眼颜色</p>
                     </div>
                 </div>
@@ -138,7 +148,7 @@
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 dark:group-hover:bg-black/20 transition-colors duration-300"></div>
                     </div>
                     <div class="p-4">
-                        <h4 class="font-semibold text-text-primary dark:text-text-primary-dark mb-2 group-hover:text-header dark:group-hover:text-header-dark transition-colors duration-300">异瞳</h4>
+                        <h4 class="font-semibold text-text-primary dark:text-text-primary-dark mb-2 group-hover:text-header dark:group-hover:text-gray-400 transition-colors duration-300">异瞳</h4>
                         <p class="text-text-secondary dark:text-text-secondary-dark text-sm">漂亮的流浪猫，拥有独特的双眼颜色</p>
                     </div>
                 </div>
@@ -147,26 +157,45 @@
 
         <!-- 联系方式区域 -->
         <section class="mb-16 bg-card dark:bg-card-dark rounded-xl shadow-sm dark:shadow-gray-800/50 p-6 md:p-8 transition-colors duration-300">
-            <h3 class="text-2xl font-bold text-text-primary dark:text-text-primary-dark mb-6 text-center">联系我</h3>
-            <div class="flex flex-col md:flex-row justify-center items-center gap-8">
-                <!-- 社交媒体 -->
-                <div class="flex gap-6">
-                    <!-- 抖音 -->
-                    <a href="https://www.douyin.com" target="_blank" class="flex flex-col items-center group">
-                        <div class="w-16 h-16 rounded-full bg-header/20 dark:bg-header-dark/30 flex items-center justify-center text-header dark:text-white text-2xl mb-2 group-hover:bg-header dark:group-hover:bg-header-dark group-hover:text-white transition-all duration-300">
-                            <i class="fa fa-music"></i>
+            <h3 class="text-2xl font-bold text-text-primary dark:text-text-primary-dark mb-8 text-center">联系我</h3>
+            <div class="flex justify-center gap-10">
+                <!-- 抖音图标 -->
+                <a href="https://www.douyin.com" target="_blank" 
+                   class="flex flex-col items-center group transform hover:scale-110 transition-transform duration-300">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow duration-300 relative">
+                        <!-- 抖音图标背景（渐变） -->
+                        <div class="absolute inset-0 douyin-icon-light dark:douyin-icon-dark"></div>
+                        <!-- 抖音音符图标 -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <!-- 抖音音符SVG图标 -->
+                            <svg viewBox="0 0 24 24" class="w-14 h-14 text-white">
+                                <path fill="currentColor" d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.78 0 1.49.35 2.08.88V8.16c-4.85.13-8.73 4.33-8.73 9.29 0 5.14 4.14 9.29 9.29 9.29s9.29-4.15 9.29-9.29c0-3.39-1.82-6.47-4.52-8.05Zm-7.84 13.29c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4Z"/>
+                            </svg>
                         </div>
-                        <span class="text-text-secondary dark:text-text-secondary-dark group-hover:text-header dark:group-hover:text-white transition-colors duration-300">抖音</span>
-                    </a>
-                    <!-- Bilibili -->
-                    <a href="https://www.bilibili.com" target="_blank" class="flex flex-col items-center group">
-                        <div class="w-16 h-16 rounded-full bg-header/20 dark:bg-header-dark/30 flex items-center justify-center text-header dark:text-white text-2xl mb-2 group-hover:bg-header dark:group-hover:bg-header-dark group-hover:text-white transition-all duration-300">
-                            <i class="fa fa-play-circle"></i>
+                    </div>
+                </a>
+
+                <!-- Bilibili图标 -->
+                <a href="https://www.bilibili.com" target="_blank" 
+                   class="flex flex-col items-center group transform hover:scale-110 transition-transform duration-300">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow duration-300 relative">
+                        <!-- B站粉色背景 -->
+                        <div class="absolute inset-0 bg-bilibili"></div>
+                        <!-- B站TV图标 -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <!-- B站TV SVG图标 -->
+                            <svg viewBox="0 0 24 24" class="w-14 h-14 text-white">
+                                <path fill="currentColor" d="M18.223 3.086a1.25 1.25 0 0 1 0 1.768L17.08 5.996h1.17A3.75 3.75 0 0 1 22 9.747v7.5a3.75 3.75 0 0 1-3.75 3.75H5.75A3.75 3.75 0 0 1 2 17.247v-7.5a3.75 3.75 0 0 1 3.75-3.75h1.166L5.775 4.855a1.25 1.25 0 1 1 1.767-1.768l2.652 2.652c.079.079.145.165.198.257h3.213c.053-.092.12-.18.199-.258l2.651-2.652a1.25 1.25 0 0 1 1.768 0Zm.027 5.42H5.75a1.25 1.25 0 0 0-1.25 1.25v7.5a1.25 1.25 0 0 0 1.25 1.25h12.5a1.25 1.25 0 0 0 1.25-1.25v-7.5a1.25 1.25 0 0 0-1.25-1.25Zm-10 2.5a.938.938 0 0 1 .938.938v4.375a.938.938 0 0 1-1.876 0v-4.375a.938.938 0 0 1 .938-.938Zm4.688.938a.938.938 0 1 1 1.876 0v4.375a.938.938 0 0 1-1.876 0v-4.375Z"/>
+                            </svg>
                         </div>
-                        <span class="text-text-secondary dark:text-text-secondary-dark group-hover:text-header dark:group-hover:text-white transition-colors duration-300">Bilibili</span>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
+            
+            <!-- 提示文字 -->
+            <p class="text-center text-text-secondary dark:text-text-secondary-dark mt-10 text-sm">
+                点击图标访问我的社交媒体主页
+            </p>
         </section>
     </main>
 
