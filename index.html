@@ -24,6 +24,14 @@
                             DEFAULT: '#ffffff', // 浅色模式卡片背景
                             dark: '#1f2937',    // 深色模式卡片背景
                         },
+                        header: {
+                            DEFAULT: '#1e40af', // 浅色模式页眉颜色 - 深蓝色
+                            dark: '#1e3a8a',    // 深色模式页眉颜色 - 更深的蓝色
+                        },
+                        footer: {
+                            DEFAULT: '#1e40af', // 浅色模式页脚颜色 - 深蓝色
+                            dark: '#1e3a8a',    // 深色模式页脚颜色 - 更深的蓝色
+                        },
                         text: {
                             primary: {
                                 DEFAULT: '#111827', // 浅色模式主要文字
@@ -54,18 +62,11 @@
     </style>
 </head>
 <body class="bg-background dark:bg-background-dark text-text-primary dark:text-text-primary-dark font-sans transition-colors duration-300">
-    <!-- 主题切换按钮 -->
-    <div class="fixed top-4 right-4 z-50">
-        <button id="themeToggle" class="p-3 rounded-full bg-card dark:bg-card-dark shadow-lg hover:shadow-xl transition-all duration-300 group">
-            <i id="themeIcon" class="fa fa-sun text-yellow-500 dark:text-gray-300 text-xl group-hover:rotate-45 transition-transform duration-300"></i>
-        </button>
-    </div>
-
     <!-- 页眉 -->
-    <header class="bg-primary dark:bg-gray-900 text-white dark:text-text-primary-dark py-6 px-4 shadow-md dark:shadow-gray-900/50">
+    <header class="bg-header dark:bg-header-dark text-white py-6 px-4 shadow-md dark:shadow-gray-900/50 transition-colors duration-300">
         <div class="container mx-auto text-center">
             <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-shadow dark:text-shadow-dark">雲山河</h1>
-            <p class="text-[clamp(1rem,2vw,1.2rem)] mt-2 opacity-90 dark:opacity-80">探索生活的无限可能</p>
+            <p class="text-[clamp(1rem,2vw,1.2rem)] mt-2 opacity-90">探索生活的无限可能</p>
         </div>
     </header>
 
@@ -79,7 +80,7 @@
         <!-- 个人简介区域 -->
         <section class="mb-16 bg-card dark:bg-card-dark rounded-xl shadow-sm dark:shadow-gray-800/50 p-6 md:p-8 transition-colors duration-300">
             <div class="flex flex-col md:flex-row items-center gap-8">
-                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary/20 dark:border-primary-dark/30">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-header/30 dark:border-header-dark/40">
                     <!-- 头像占位图（实际使用时替换src） -->
                     <img src="https://sway.cloud.microsoft.com/s/c1GQ5ebYLRbUBVFZ/images/X9j4w7sbZz0tuL?" 
                          alt="雲山河的头像" 
@@ -107,7 +108,7 @@
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 dark:group-hover:bg-black/20 transition-colors duration-300"></div>
                     </div>
                     <div class="p-4">
-                        <h4 class="font-semibold text-text-primary dark:text-text-primary-dark mb-2 group-hover:text-primary dark:group-hover:text-primary-dark transition-colors duration-300">异瞳</h4>
+                        <h4 class="font-semibold text-text-primary dark:text-text-primary-dark mb-2 group-hover:text-header dark:group-hover:text-header-dark transition-colors duration-300">异瞳</h4>
                         <p class="text-text-secondary dark:text-text-secondary-dark text-sm">漂亮的流浪猫，拥有独特的双眼颜色</p>
                     </div>
                 </div>
@@ -122,7 +123,7 @@
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 dark:group-hover:bg-black/20 transition-colors duration-300"></div>
                     </div>
                     <div class="p-4">
-                        <h4 class="font-semibold text-text-primary dark:text-text-primary-dark mb-2 group-hover:text-primary dark:group-hover:text-primary-dark transition-colors duration-300">异瞳</h4>
+                        <h4 class="font-semibold text-text-primary dark:text-text-primary-dark mb-2 group-hover:text-header dark:group-hover:text-header-dark transition-colors duration-300">异瞳</h4>
                         <p class="text-text-secondary dark:text-text-secondary-dark text-sm">漂亮的流浪猫，拥有独特的双眼颜色</p>
                     </div>
                 </div>
@@ -137,7 +138,7 @@
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 dark:group-hover:bg-black/20 transition-colors duration-300"></div>
                     </div>
                     <div class="p-4">
-                        <h4 class="font-semibold text-text-primary dark:text-text-primary-dark mb-2 group-hover:text-primary dark:group-hover:text-primary-dark transition-colors duration-300">异瞳</h4>
+                        <h4 class="font-semibold text-text-primary dark:text-text-primary-dark mb-2 group-hover:text-header dark:group-hover:text-header-dark transition-colors duration-300">异瞳</h4>
                         <p class="text-text-secondary dark:text-text-secondary-dark text-sm">漂亮的流浪猫，拥有独特的双眼颜色</p>
                     </div>
                 </div>
@@ -152,17 +153,17 @@
                 <div class="flex gap-6">
                     <!-- 抖音 -->
                     <a href="https://www.douyin.com" target="_blank" class="flex flex-col items-center group">
-                        <div class="w-16 h-16 rounded-full bg-primary/10 dark:bg-gray-700 flex items-center justify-center text-primary dark:text-gray-300 text-2xl mb-2 group-hover:bg-primary dark:group-hover:bg-gray-600 group-hover:text-white dark:group-hover:text-white transition-all duration-300">
+                        <div class="w-16 h-16 rounded-full bg-header/20 dark:bg-header-dark/30 flex items-center justify-center text-header dark:text-white text-2xl mb-2 group-hover:bg-header dark:group-hover:bg-header-dark group-hover:text-white transition-all duration-300">
                             <i class="fa fa-music"></i>
                         </div>
-                        <span class="text-text-secondary dark:text-text-secondary-dark group-hover:text-primary dark:group-hover:text-gray-300 transition-colors duration-300">抖音</span>
+                        <span class="text-text-secondary dark:text-text-secondary-dark group-hover:text-header dark:group-hover:text-white transition-colors duration-300">抖音</span>
                     </a>
                     <!-- Bilibili -->
                     <a href="https://www.bilibili.com" target="_blank" class="flex flex-col items-center group">
-                        <div class="w-16 h-16 rounded-full bg-primary/10 dark:bg-gray-700 flex items-center justify-center text-primary dark:text-gray-300 text-2xl mb-2 group-hover:bg-primary dark:group-hover:bg-gray-600 group-hover:text-white dark:group-hover:text-white transition-all duration-300">
+                        <div class="w-16 h-16 rounded-full bg-header/20 dark:bg-header-dark/30 flex items-center justify-center text-header dark:text-white text-2xl mb-2 group-hover:bg-header dark:group-hover:bg-header-dark group-hover:text-white transition-all duration-300">
                             <i class="fa fa-play-circle"></i>
                         </div>
-                        <span class="text-text-secondary dark:text-text-secondary-dark group-hover:text-primary dark:group-hover:text-gray-300 transition-colors duration-300">Bilibili</span>
+                        <span class="text-text-secondary dark:text-text-secondary-dark group-hover:text-header dark:group-hover:text-white transition-colors duration-300">Bilibili</span>
                     </a>
                 </div>
             </div>
@@ -170,74 +171,45 @@
     </main>
 
     <!-- 页脚 -->
-    <footer class="bg-primary dark:bg-gray-900 text-white dark:text-text-primary-dark py-6 px-4 text-center shadow-md dark:shadow-gray-900/50">
+    <footer class="bg-footer dark:bg-footer-dark text-white py-6 px-4 text-center shadow-md dark:shadow-gray-900/50 transition-colors duration-300">
         <div class="container mx-auto">
             <p class="mb-2">&copy; 2025 雲山河. All rights reserved.</p>
-            <p class="text-sm opacity-80 dark:opacity-70">当前主题：<span id="currentTheme">浅色模式</span></p>
         </div>
     </footer>
 
     <script>
-        // 主题管理
-        class ThemeManager {
-            constructor() {
-                this.themeToggle = document.getElementById('themeToggle');
-                this.themeIcon = document.getElementById('themeIcon');
-                this.currentThemeElement = document.getElementById('currentTheme');
-                this.init();
-            }
-
-            init() {
-                // 检查本地存储和系统偏好
-                const storedTheme = localStorage.getItem('theme');
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                
-                if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
-                    this.enableDarkMode();
-                } else {
-                    this.enableLightMode();
-                }
-
-                // 添加切换事件
-                this.themeToggle.addEventListener('click', () => this.toggleTheme());
-
-                // 监听系统主题变化
-                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-                    if (!localStorage.getItem('theme')) {
-                        e.matches ? this.enableDarkMode() : this.enableLightMode();
-                    }
-                });
-            }
-
-            enableDarkMode() {
+        // 自动检测系统主题并应用
+        document.addEventListener('DOMContentLoaded', () => {
+            // 检查系统主题偏好
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            // 检查本地存储
+            const storedTheme = localStorage.getItem('theme');
+            
+            // 应用主题：优先使用本地存储，没有则使用系统偏好
+            if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
                 document.documentElement.classList.add('dark');
-                this.themeIcon.classList.remove('fa-sun', 'text-yellow-500');
-                this.themeIcon.classList.add('fa-moon', 'text-gray-300');
-                this.currentThemeElement.textContent = '深色模式';
                 localStorage.setItem('theme', 'dark');
-            }
-
-            enableLightMode() {
+            } else {
                 document.documentElement.classList.remove('dark');
-                this.themeIcon.classList.remove('fa-moon', 'text-gray-300');
-                this.themeIcon.classList.add('fa-sun', 'text-yellow-500');
-                this.currentThemeElement.textContent = '浅色模式';
                 localStorage.setItem('theme', 'light');
             }
 
-            toggleTheme() {
-                if (document.documentElement.classList.contains('dark')) {
-                    this.enableLightMode();
-                } else {
-                    this.enableDarkMode();
+            // 监听系统主题变化（只有在用户没有手动设置时才响应）
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                const currentTheme = localStorage.getItem('theme');
+                // 只有在用户没有手动设置主题时才响应系统变化
+                if (currentTheme === null) {
+                    if (e.matches) {
+                        document.documentElement.classList.add('dark');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.documentElement.classList.remove('dark');
+                        localStorage.setItem('theme', 'light');
+                    }
                 }
-            }
-        }
+            });
 
-        // 初始化主题管理器
-        document.addEventListener('DOMContentLoaded', () => {
-            new ThemeManager();
-            
             // 平滑滚动效果
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
